@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap');
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	font-family: 'Poppins',sans-serif;
+}
+body{
+	background: #fff;
+}
+.main{
+	position: relative;
+	height: 100vh;
+	width: 100%
+}
+.main header{
+	position: fixed;
+	top: 0;
+	height: 40px;
+	width: 100%;
+	padding: 15px 0 0 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	z-index: 99999;
+	background: #fff;
+}
+.main header .logo{
+	position: relative;
+	font-size: 1.5rem;
+	font-weight: 750;
+	text-decoration: none;
+	color: #666;
+}
+.main header .logo span{
+	color: #017bf5;
+}
+.main header ul{
+	position: relative;
+	height: 100%;
+	width: 35%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.main header ul li{
+	position: relative;
+	list-style-type: none;
+	display: inline-block;
+	height: inherit;
+}
+.main header ul li a{
+	position: relative;
+	display: block;
+	text-decoration: none;
+	color: #666;
+	font-weight: 550;
+	font-size: 0.99rem;
+	padding: 0px 10px;
+	height:inherit;
+	text-align: center;
+}
+.main header ul li a::before{
+	position: absolute;
+	content: '';
+	bottom: -5px;
+	left: 0;
+	width: 100%;
+	height: 0;
+	background: #017bf5;
+	transition: 0.3s linear;
+}
+.main header ul li a:hover::before,
+.main header ul li.active a::before{
+	height: 5px;
+}
+/*slider*/
+.main .slider{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	background: #fff;
+}
+.main .slider .slides{
+	position: relative;
+	height: 100%;
+	width: calc(100% * 5);
+	display: flex;
+	overflow: hidden;
+	transition: 0.3s linear;
+}
+.main .slider .slides .slide{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 40% auto;
+	overflow: hidden;
+}
+.main .slider .slides .slide .left{
+	position: relative;
+	height: auto;
+	width: 60%;
+	margin:25% auto 0;
+}
+.main .slider .slides .slide .left p{
+	position: relative;
+	font-size: 1.2rem;
+	color: #444;
+	margin-bottom: 5%;
+}
+.main .slider .slides .slide .left a{
+	position: relative;
+	text-decoration: none;
+	color: #666;
+	font-weight: 600;
+	font-size: 1.2rem;
+	padding: 10px 10px;
+}
+.main .slider .slides .slide .left a::before{
+	position: absolute;
+	content: 'Read More';
+	color: #fff;
+	bottom: 0;
+	left: 0;
+	height: 0;
+	width: 100%;
+	background: #000;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 0.3s linear;
+}
+.main .slider .slides .slide .left a:hover::before{
+	height: 100%;
+}
+.main .slider .slides .slide .right{
+	position: relative;
+	height: 96%;
+	width: 100%;
+	top: 8%;
+	overflow: hidden;
+}
+.main .slider .slides .slide .right img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+/*banner before{}*/
+.main .slider .banner-before{
+	position: absolute;
+	bottom: 8%;
+	left: 3%;
+	font-size: 6rem;
+	font-weight: 700;
+	width: auto;
+	height: auto;
+	background: rgba(255, 255, 255, 0.8);
+	mix-blend-mode: difference;
+}
+.main .slider .banner-before span{
+	display: none;
+}
+.main .slider .banner-before span.active{
+	display: inherit;
+	padding:10px 15px !important;
+}
+/*slide count*/
+.main .slider .slideCount{
+	position: absolute;
+	top: 10%;
+	left: 2%;
+	font-weight: 700;
+	font-size: 3.5rem;
+	color: #666;
+	display: flex;
+}
+.main .slider .slideCount span{
+	display: none;
+	position: relative;
+	top: 15px;
+	font-weight: 800;
+}
+.main .slider .slideCount span.active{
+	display: inherit;
+}
+/*icons*/
+.main .slider .icons{
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	height: auto;
+	width: 180px;
+	color: #fff;
+}
+.main .slider .icons div{
+	display: block;
+	font-size: 1.2rem;
+	width: 100%;
+	padding:10px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: 0.3s linear;
+	margin-left: -70%;
+}
+.main .slider .icons div i{
+	margin:0 0 0 5%;
+}
+.main .slider .icons div:nth-child(1){
+	background:#017bf5;
+}
+.main .slider .icons div:nth-child(2){
+	background:purple;
+}
+.main .slider .icons div:nth-child(3){
+	background:skyblue;
+}
+.main .slider .icons div:nth-child(4){
+	background:red;
+}
+.main .slider .icons div:nth-child(1) i{
+	margin-left: 8%;
+}
+.main .slider .icons div:nth-child(3) i{
+	margin-left: 28%;
+}
+.main .slider .icons div:nth-child(4) i{
+	margin-left: 18%;
+}
+.main .slider .icons div:hover{
+	background:#fff;
+	color: #000;
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+	margin-left: 0;http://localhost:3000/images/image1.jpg
+}
+.main .slider .slideindicators{
+	position: absolute;
+	top:15%;
+	right: 5%;
+	z-index: 99;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	width: auto;
+	height: 150px;
+}
+.main .slider .slideindicators input{
+	-webkit-appearance:none !important;
+	position: relative;
+	width: 20px;
+	height: 20px;
+	border:2px solid #fff;
+	background: transparent;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.main .slider .slideindicators input:checked{
+	background: #017bf5;
+	outline: none;
+}
+.main .slider .sliderControls{
+	position: absolute;
+	width: calc(45px *2);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	bottom: 10%;
+	right: 5%;
+	z-index: 99;
+}
+.main  .slider .sliderControls a{
+	position: relative;
+	text-decoration: none;
+	color: #fff;
+	font-size: 1.5rem;
+	width: 45%;
+	border:1.5px solid #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding:2px 0;
+}
+.main  .slider .sliderControls a:hover{
+	border-color: #ccc;
+	color: #ccc;
+}
